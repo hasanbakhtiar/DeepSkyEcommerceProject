@@ -1,0 +1,40 @@
+.card{
+    transition: 0.5s;
+    img{
+        position: relative;
+    }
+    .card-hover{
+        z-index: 22;
+        opacity: 0;
+        padding: 5px;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        background-color: white;
+        transition: 0.5s;
+        .addtocart,.addtowishlist{
+            padding: 10px;
+            a{
+                cursor: pointer;
+                color: black;
+                transition: 0.2s;
+                i{
+                    font-size: 17   px;
+                }
+            }
+            a:hover{
+                color: #ff6a28;
+            }
+        }
+        .addtocart{
+            border-bottom: 1px solid rgb(228, 220, 220);
+        }
+    }
+}
+.card:hover .card-hover{
+    opacity: 1;
+}
+.card:hover{
+    -webkit-box-shadow: 5px 5px 15px 5px #939393; 
+    box-shadow: 5px 5px 15px 5px #939393;
+}

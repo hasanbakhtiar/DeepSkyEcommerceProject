@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from '../img/logo.png';
 import { Link } from 'react-router-dom'
+import {useCart} from 'react-use-cart'
+
+
 
 class MenuItem extends Component {
   render() {
@@ -24,9 +27,11 @@ class MenuItem extends Component {
   }
 }
 
-class Header extends Component {
+const Header =()=>{
+  
 
-  render() {
+ 
+    const {totalItems}=useCart();
     return (
       <header >
         <nav className="navbar navbar-expand-lg navbar-light ec-nav">
@@ -55,14 +60,14 @@ class Header extends Component {
                   <MenuItem gotoitem="/Myaccount" title="My Account" />
                 </ul>
 
-                <button className="btn btn-outline-success" type="submit"><i class="fas fa-shopping-cart me-1"></i> 0 Items</button>
+                <Link to="/AddToCart" className="btn btn-outline-success" type="submit"><i class="fas fa-shopping-cart me-1"></i> {totalItems} Items</Link>
               </form>
             </div>
           </div>
         </nav>
       </header>
     )
-  }
+  
 }
 
 export default Header

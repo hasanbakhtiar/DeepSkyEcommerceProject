@@ -8,6 +8,7 @@ import Pages from './components/Pages';
 import Myaccount from './components/Myaccount';
 import Home from './components/Home';
 import ContactUs from './components/ContactUs';
+import AddToCart from './components/AddToCart';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Pages" component={Pages}></Route>
         <Route path="/Myaccount" component={Myaccount}></Route>
         <Route path="/ContactUs" component={ContactUs}></Route>
+        <Route path="/AddToCart" component={AddToCart}></Route>
         <Footer />
       </BrowserRouter>
     </div>
