@@ -1,21 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {useCart} from 'react-use-cart'
 
 
 
-class CartItem extends Component {
-    render() {
+const CartItem = (props) => {
+
+    const {addItem} = useCart();
+
+    const added = () => {
+      addItem(props.item)
+      alert("Added Successfuly!")
+    }
         return (
-            <div className="col-lg-3 col-md-6 col-sm-12">
+            <div className="col-lg-3 col-md-6 col-sm-12 mt-2">
                 <div class="card" style={{ width: "20rem" }}>
-                    <img src={this.props.cardimgs} class="card-img-top" alt="..." />
+                    <img src={props.img} class="card-img-top" alt="..." />
+                    <div className="card-hover">
+                        <div className="addtocart"><a onClick={added} title="Add to Cart"><i class="fas fa-cart-plus"></i></a></div>
+                        <div className="addtowishlist"><a title="Add to Wishlist"><i class="far fa-heart"></i></a></div>
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">{this.props.cardtitle}</h5>
-                        <p class="card-text"><span>{this.props.prices}</span> <del>{this.props.pricedel}</del>  </p>
+                        <h5 class="card-title">{props.title}</h5>
+                        <p class="card-text"><span>${props.price}.00</span> <del>{props.pricedel}</del>  </p>
                     </div>
                 </div>
             </div>
         )
-    }
+    
 }
 
 export default CartItem

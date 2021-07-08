@@ -6,6 +6,64 @@ header .ec-nav {
   padding: 29px !important;
 }
 
+.card {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card img {
+  position: relative;
+}
+
+.card .card-hover {
+  z-index: 22;
+  opacity: 0;
+  padding: 5px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card .card-hover .addtocart, .card .card-hover .addtowishlist {
+  padding: 10px;
+}
+
+.card .card-hover .addtocart a, .card .card-hover .addtowishlist a {
+  cursor: pointer;
+  color: black;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card .card-hover .addtocart a i, .card .card-hover .addtowishlist a i {
+  font-size: 17   px;
+}
+
+.card .card-hover .addtocart a:hover, .card .card-hover .addtowishlist a:hover {
+  color: #ff6a28;
+}
+
+.card .card-hover .addtocart {
+  border-bottom: 1px solid #e4dcdc;
+}
+
+.card:hover .card-hover {
+  opacity: 1;
+}
+
+.card:hover {
+  -webkit-box-shadow: 5px 5px 15px 5px #939393;
+  box-shadow: 5px 5px 15px 5px #939393;
+}
+
+td img:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
 footer {
   margin-top: 100px;
   width: 100%;
