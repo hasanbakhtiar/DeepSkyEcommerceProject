@@ -14,6 +14,7 @@ import AddToCart from './components/AddToCart';
 function App() {
   return (
     <div className="container">
+      <h1>Salam Farid</h1>
       <BrowserRouter>
         <Header />
         <Route exact path="/" component={Home}></Route>
